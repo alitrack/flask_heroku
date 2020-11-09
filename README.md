@@ -82,6 +82,8 @@ Of course you can change autoflask to other unique app name and  run the above c
 
 ## Todo List
 
+[Chinese tutorial](https://mp.weixin.qq.com/s/Gg8-bEtVXHb1aMOUrzT0Ew)
+
 How Flask fits into MVC(Model-View-Controller) design pattern by building our 2nd Flask web application to display todo list.
 
 - Install more packages
@@ -92,13 +94,14 @@ pipenv install psycopg2-binary flask-sqlalchemy
 Noteice: install psycopg2-binary  only when you want to use Postgres
 
 - MVC
-  - Model: models.py
-  - View: templates/index.html & static/main.css
-  - Controller: routes.py 
+  - Model: `models.py`
+  - View: `templates/index.html` & `static/main.css`
+  - Controller: `routes.py` 
 
 - Database
   table(s):created automatically 
 ```
+-- SQLite version
 CREATE TABLE todo (
 	id INTEGER NOT NULL, 
 	text VARCHAR(200), 
