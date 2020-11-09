@@ -80,3 +80,30 @@ git push heroku master
 ```
 Of course you can change autoflask to other unique app name and  run the above codes directly.
 
+## Todo List
+
+How Flask fits into MVC(Model-View-Controller) design pattern by building our 2nd Flask web application to display todo list.
+
+- Install more packages
+
+```sh
+pipenv install psycopg2-binary flask-sqlalchemy
+```
+Noteice: install psycopg2-binary  only when you want to use Postgres
+
+- MVC
+  - Model: models.py
+  - View: templates/index.html & static/main.css
+  - Controller: routes.py 
+
+- Database
+  table(s):created automatically 
+```
+CREATE TABLE todo (
+	id INTEGER NOT NULL, 
+	text VARCHAR(200), 
+	complete BOOLEAN, 
+	PRIMARY KEY (id), 
+	CHECK (complete IN (0, 1))
+)
+```
