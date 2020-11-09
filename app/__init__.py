@@ -8,7 +8,7 @@ import psycopg2
 app = Flask(__name__) 
 
 # if you configure Heroku Postgres addon, and database url info is stored in system variable, DATABASE_URL 
-if os.environ.get('DATABASE_URL')=='True':
+if os.environ.get('DATABASE_URL'):
     app.config['SQLALCHEMY_DATABASE_URI'] = f"{os.environ['DATABASE_URL']}?sslmode=require"
     # conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 else:
